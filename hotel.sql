@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2019 at 11:44 PM
+-- Generation Time: Jul 14, 2019 at 06:04 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -49,6 +49,7 @@ INSERT INTO `admins` (`id`, `ad_name`, `ad_password`) VALUES
 --
 
 CREATE TABLE `reservation` (
+  `id` int(11) NOT NULL,
   `res_date` varchar(11) NOT NULL,
   `leave_date` varchar(11) NOT NULL,
   `room` varchar(7) NOT NULL,
@@ -61,19 +62,12 @@ CREATE TABLE `reservation` (
 -- Dumping data for table `reservation`
 --
 
-INSERT INTO `reservation` (`res_date`, `leave_date`, `room`, `guest`, `email`, `note`) VALUES
-('05/24/2019', '05/26/2019', '2', '3', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2', '3', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
-('05/04/2019', '05/26/2019', '1 rooms', '1 guest', 'mohebsamir80@yahoo.com', 'ya rab '),
-('05/21/2019', '05/21/2019', '1 rooms', '1 guest', 'mohebsamir808@yahoo.com', 'dsdsacfsf'),
-('05/21/2019', '05/21/2019', '1 rooms', '1 guest', 'mohebsamir808@yahoo.com', 'dsdsacfsf'),
-('05/04/2019', '05/21/2019', '1 rooms', '1 guest', 'mohebsamir80@yahoo.com', 'isa 5eer ');
+INSERT INTO `reservation` (`id`, `res_date`, `leave_date`, `room`, `guest`, `email`, `note`) VALUES
+(3, '05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
+(4, '05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
+(8, '05/24/2019', '05/26/2019', '2 rooms', '3 guest', 'mohebsamir808@yahoo.com', 'ya raaaab '),
+(10, '05/21/2019', '05/21/2019', '1 rooms', '1 guest', 'mohebsamir808@yahoo.com', 'dsdsacfsf'),
+(11, '05/21/2019', '05/21/2019', '1 rooms', '1 guest', 'mohebsamir808@yahoo.com', 'dsdsacfsf');
 
 --
 -- Indexes for dumped tables
@@ -86,6 +80,12 @@ ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -94,6 +94,12 @@ ALTER TABLE `admins`
 --
 ALTER TABLE `admins`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `reservation`
+--
+ALTER TABLE `reservation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -13,6 +13,7 @@
                                                 <th>number of guests</th>
                                                 <th>email</th>
                                                 <th>notes</th>
+                                                <th>option</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -27,6 +28,8 @@
                                                 <td><?php echo $row["guest"]; ?></td>
                                                 <td><?php echo $row["email"]; ?></td>
                                                 <td><?php echo $row["note"]; ?></td>
+                                                <td> <a class="btn btn-rounded btn-danger"
+                                                 href="delete.php?id=<?php echo $row["id"]; ?> ">delete</a></td>
                                             <?php } ?>
                                             </tr> 
                                         </tbody>
