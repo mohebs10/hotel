@@ -30,6 +30,8 @@
                                                 <td><?php echo $row["note"]; ?></td>
                                                 <td> <a class="btn btn-rounded btn-danger"
                                                  href="delete.php?id=<?php echo $row["id"]; ?> ">delete</a></td>
+                                                 <td> <a class="btn btn-rounded btn-warning"
+                                                 href="edit.php?id=<?php echo $row["id"]; ?> ">edit</a></td>
                                             <?php } ?>
                                             </tr> 
                                         </tbody>
